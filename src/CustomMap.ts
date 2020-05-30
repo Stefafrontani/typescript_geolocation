@@ -1,9 +1,10 @@
-interface Mappable {
+export interface Mappable {
     location: {
         lat: number;
         lng: number;
     };
     markerContent(): string;
+    // color: string; // If we add here a property, not onlt index.ts will warning an error but also User.ts and Company.TS. Because we are implementing mappable inside User and Company classes
 }
 
 export class CustomMap {
