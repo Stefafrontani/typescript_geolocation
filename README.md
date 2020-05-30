@@ -15,3 +15,11 @@ So:
 1. Run `parcel index.html`
 
 The parcel library is in charge of reading the script tag in the html, identify the ts, convert it to a js file and attach again the js bundle inside the html.
+
+### Google Maps exaplanation
+
+1. Go to https://console.cloud.google.com/
+2. Create new project
+3. Add library maps javascript api (library section)
+4. Create an api key
+5. Add script in html (before our js code inside src)
