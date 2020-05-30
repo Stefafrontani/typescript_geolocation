@@ -25,3 +25,17 @@ The parcel library is in charge of reading the script tag in the html, identify 
 5. Add script in html (before our js code inside src)
 
 As we added google api in a script, it adds a GLOBAL variable in the window object called `google`. This is great but ts complains about not finding any definition of that namespace / variable.
+
+## Tip: '|' operator
+
+Imagine we have:the following:
+
+```
+// class User and Company with syntax
+User: { userName: string; location { lat: long; lng: number } }
+Company: { companyName: string; location { lat: long; lng: number } }
+addMarker(mappable: User | Company)
+```
+
+That '|' operator will map each property of each class and see if the other class has that property.
+If they do not share the property, that property will be discarde to use inside the function. In this case, only location will be "available" to use inside the function
