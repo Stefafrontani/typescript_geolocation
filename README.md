@@ -23,3 +23,5 @@ The parcel library is in charge of reading the script tag in the html, identify 
 3. Add library maps javascript api (library section)
 4. Create an api key
 5. Add script in html (before our js code inside src)
+
+As we added google api in a script, it adds a GLOBAL variable in the window object called `google`. This is great but ts complains about not finding any definition of that namespace / variable.
